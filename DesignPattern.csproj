@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bridge\Bridge.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Composite\Composite.cs" />
     <Compile Include="Factory\Abstract Factory.cs" />
     <Compile Include="Factory\Factory Method.cs" />
