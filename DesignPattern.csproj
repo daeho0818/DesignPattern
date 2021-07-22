@@ -67,6 +67,8 @@
     <Compile Include="5. Visitor\Car.cs" />
     <Compile Include="5. Visitor\Iceacream.cs" />
     <Compile Include="5. Visitor\Visitor.cs" />
+    <Compile Include="6. Observer\Observer_1.cs" />
+    <Compile Include="6. Observer\Observer_2.cs" />
     <Compile Include="Factory\Abstract Factory.cs" />
     <Compile Include="Factory\Factory Method.cs" />
     <Compile Include="Factory\Simple Factory.cs" />

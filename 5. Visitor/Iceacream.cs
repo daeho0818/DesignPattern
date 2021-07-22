@@ -58,7 +58,7 @@ namespace Iceacream
 
     class Client
     {
-        static void Main(string[] args)
+        static void _Main(string[] args)
         {
             HowToTest();
         }
