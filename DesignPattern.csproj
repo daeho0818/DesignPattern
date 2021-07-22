@@ -62,17 +62,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bridge\Bridge.cs" />
-    <Compile Include="Composite\Composite.cs" />
+    <Compile Include="3. Bridge\Bridge.cs" />
+    <Compile Include="4. Composite\Composite.cs" />
+    <Compile Include="5. Visitor\Car.cs" />
+    <Compile Include="5. Visitor\Iceacream.cs" />
+    <Compile Include="5. Visitor\Visitor.cs" />
     <Compile Include="Factory\Abstract Factory.cs" />
     <Compile Include="Factory\Factory Method.cs" />
     <Compile Include="Factory\Simple Factory.cs" />
     <Compile Include="Factory\Static Factory Method.cs" />
-    <Compile Include="Object Pool\Object Pool.cs" />
-    <Compile Include="Object Pool\Thread Pool.cs" />
+    <Compile Include="2. Object Pool\Object Pool.cs" />
+    <Compile Include="2. Object Pool\Thread Pool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="singleton\Configuration.cs" />
-    <Compile Include="singleton\Singleton.cs" />
+    <Compile Include="1. Singleton\Configuration.cs" />
+    <Compile Include="1. Singleton\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
