@@ -48,7 +48,7 @@ namespace Observer_2
 
     class Program
     {
-        static void Main(string[] args)
+        static void _Main(string[] args)
         {
             Observer objserver = new Observer();
 
