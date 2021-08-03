@@ -70,6 +70,8 @@
     <Compile Include="6. Observer\Observer_1.cs" />
     <Compile Include="6. Observer\Observer_2.cs" />
     <Compile Include="7. Command\Command.cs" />
+    <Compile Include="8. State\Vending Machine.cs" />
+    <Compile Include="8. State\State.cs" />
     <Compile Include="Factory\Abstract Factory.cs" />
     <Compile Include="Factory\Factory Method.cs" />
     <Compile Include="Factory\Simple Factory.cs" />

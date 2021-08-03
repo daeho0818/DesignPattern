@@ -17,8 +17,8 @@ namespace Command
 
         public void AddCommand(StockBroker broker, string symbol, TxType txType, int qty)
         {
-            ICommand c = new StockCommand(broker, symbol, txType, qty);
-            _commands.Add(c);
+            ICommand command = new StockCommand(broker, symbol, txType, qty);
+            _commands.Add(command);
         }
 
         public void ExcuteAll()
