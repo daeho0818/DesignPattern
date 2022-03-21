@@ -17,6 +17,7 @@ namespace ObjectPool
     {
         private readonly ConcurrentBag<MyConnection> pool = new ConcurrentBag<MyConnection>();
 
+        // pool에 obj가 있다면 반환, 없다면 생성하여 반환하는 함수
         public MyConnection GetObject()
         {
             MyConnection obj;
@@ -30,6 +31,7 @@ namespace ObjectPool
             }
         }
 
+        // 사용이 끝난 obj를 pool에 돌려주는 함수
         public void ReleaseObject(MyConnection conn)
         {
             pool.Add(conn);

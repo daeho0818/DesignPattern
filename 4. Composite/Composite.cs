@@ -24,7 +24,7 @@ namespace Composite
             Console.WriteLine($"File : {Name}");
         }
     }
-    
+
     public class Directory : Node
     {
         private List<Node> children = new List<Node>();
@@ -36,8 +36,8 @@ namespace Composite
 
         public override void Display()
         {
-            Console.WriteLine($"DIR : {Name}");
-            foreach(Node comp in children)
+            Console.WriteLine($"DIS : {Name}");
+            foreach (Node comp in children)
             {
                 comp.Display();
             }
@@ -45,7 +45,7 @@ namespace Composite
 
         public void AddChild(Node child)
         {
-            if(child != null)
+            if (child != null)
             {
                 children.Add(child);
             }
@@ -61,7 +61,7 @@ namespace Composite
             File file2 = new File("a2.doc");
             File file3 = new File("a3.doc");
             Directory sub = new Directory("SubFolder");
-            
+
             dir.AddChild(file1);
             dir.AddChild(file2);
             dir.AddChild(file3);
@@ -72,7 +72,8 @@ namespace Composite
 
         static void DisplayNodes(params Node[] component)
         {
-            foreach(Node item in component)
+            // File와 Directory 둘 다 공통된 함수 실행 가능
+            foreach (Node item in component)
             {
                 item.Display();
             }

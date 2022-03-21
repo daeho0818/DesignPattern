@@ -8,6 +8,7 @@ namespace State
 {
     public class Context
     {
+        // Stage 상황에 따라 파생클래스 객체를 할당하여 함수 실행
         public State CurrentState { get; set; }
 
         public Context()
@@ -29,6 +30,7 @@ namespace State
         public abstract void ChangeScore(Context context, int score);
     }
 
+    // State 1
     public class VIPState : State
     {
         public VIPState()
@@ -46,6 +48,7 @@ namespace State
         }
     }
 
+    // State 2
     public class NormalState : State
     {
         public NormalState()
@@ -69,6 +72,7 @@ namespace State
         }
     }
 
+    // State 3
     public class BadState : State
     {
         public BadState()

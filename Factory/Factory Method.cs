@@ -20,7 +20,7 @@ namespace FactoryMethod
         }
         public void Write(string s)
         {
-
+            Console.WriteLine(s);
         }
     }
 
@@ -33,7 +33,7 @@ namespace FactoryMethod
         }
         public void Write(string s)
         {
-
+            Console.WriteLine(s);
         }
     }
     abstract class LogFactory
@@ -69,7 +69,10 @@ namespace FactoryMethod
         public void HowToTest()
         {
             LogFactory logger = new XmlLogFactory();
-            logger.Log("Log something");
+            logger.Log("Log Xml");
+
+            LogFactory logger2 = new DbLogFactory();
+            logger2.Log("Log Db");
         }
     }
 }

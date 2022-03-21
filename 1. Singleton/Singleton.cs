@@ -8,6 +8,7 @@ namespace Singleton
 {
     public sealed class Singleton
     {
+        // Singleton 객체
         public static Singleton Instance { get; } = new Singleton();
 
         private Singleton()
@@ -24,6 +25,7 @@ namespace Singleton
     {
         public static void HowToTest()
         {
+            // Singleton 객체를 활용하여 함수 호출
             Singleton.Instance.Method();
         }
     }

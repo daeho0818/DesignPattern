@@ -48,21 +48,21 @@ namespace Car
     {
         public void Visit(Engine engine)
         {
-            Console.WriteLine(engine.ToString());
+            Console.WriteLine(engine.ToString() + " " + engine.Spec);
         }
 
         public void Visit(Body body)
         {
-            Console.WriteLine(body.ToString());
+            Console.WriteLine(body.ToString() + " " + body.Spec);
         }
 
         public void Visit(Wheel wheel)
         {
-            Console.WriteLine(wheel.ToString());
+            Console.WriteLine(wheel.ToString() + " " + wheel.Spec);
         }
         public void Visit(Car car)
         {
-            Console.WriteLine(car.ToString());
+            Console.WriteLine(car.ToString() + " " + car.Market);
         }
     }
 

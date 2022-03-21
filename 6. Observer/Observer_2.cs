@@ -15,6 +15,7 @@ namespace Observer_2
         public Subject()
         {
             var timer = new System.Timers.Timer(1000);
+            // 1초(1000ms)가 지날 때마다 호출할 동작 지정
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
         }
@@ -34,6 +35,7 @@ namespace Observer_2
 
         public void Test()
         {
+            // Changed 이벤트가 호출될 때마다 실행할 동작 지정
             subject.Changed += Subject_Changed;
 
             Thread.Sleep(5000);
