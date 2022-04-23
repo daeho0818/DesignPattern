@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
+    #region 추상층 클래스
     public abstract class Abstraction
     {
         public IImplementor Implementor { get; set; }
@@ -18,7 +19,9 @@ namespace Bridge
             Implementor.ImplementorOperation();
         }
     }
+    #endregion
 
+    #region 구현체 클래스
     public interface IImplementor
     {
         void ImplementorOperation();
@@ -39,7 +42,7 @@ namespace Bridge
             Console.WriteLine("ImplementorB : ImplementorOperation()");
         }
     }
-
+    #endregion
     class Client
     {
         public static void HowToUse()

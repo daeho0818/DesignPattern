@@ -40,6 +40,20 @@ namespace Iceacream
         void Visit(ShootingStar icecream, string content);
     }
 
+    public interface IcecreamEater
+    {
+        void Eat(DogBar icecream, string content);
+        void Eat(SuperCon icecream, string content);
+        void Eat(ShootingStar icecream, string content);
+    }
+
+    public interface IcecreamNamePrinter
+    {
+        void Print(DogBar icecream);
+        void Print(SuperCon icecream);
+        void Print(ShootingStar icecream);
+    }
+
     public class IcecreamPrintVisitor : IcecreamVisitor
     {
         public void Visit(DogBar icecream, string content)
@@ -56,6 +70,38 @@ namespace Iceacream
         }
     }
 
+    public class IcecreamEatVisitor : IcecreamEater
+    {
+        public void Eat(DogBar icecream, string content)
+        {
+            Console.WriteLine($"{icecream}의 맛 : {content}");
+        }
+        public void Eat(SuperCon icecream, string content)
+        {
+            Console.WriteLine($"{icecream}의 맛 : {content}");
+        }
+        public void Eat(ShootingStar icecream, string content)
+        {
+            Console.WriteLine($"{icecream}의 맛 : {content}");
+        }
+    }
+
+    public class IcecreamNamePrintVisitor : IcecreamNamePrinter
+    {
+        public void Print(DogBar icecream)
+        {
+            Console.WriteLine("이름 : 돼지바");
+        }
+        public void Print(SuperCon icecream)
+        {
+            Console.WriteLine("이름 : 슈퍼콘");
+        }
+        public void Print(ShootingStar icecream)
+        {
+            Console.WriteLine("이름 : 슈팅스타");
+        }
+    }
+
     class Client
     {
         static void _Main(string[] args)
@@ -64,15 +110,25 @@ namespace Iceacream
         }
         static void HowToTest()
         {
-            Iceceream dogBar = new DogBar();
-            Iceceream superCon = new SuperCon();
-            Iceceream shootingStar = new ShootingStar();
+            DogBar dogBar = new DogBar();
+            SuperCon superCon = new SuperCon();
+            ShootingStar shootingStar = new ShootingStar();
 
             IcecreamVisitor visitor = new IcecreamPrintVisitor();
+            IcecreamEater eater = new IcecreamEatVisitor();
+            IcecreamNamePrinter printer = new IcecreamNamePrintVisitor();
 
             dogBar.Accept(visitor);
             superCon.Accept(visitor);
             shootingStar.Accept(visitor);
+
+            eater.Eat(dogBar, "초코와 딸기 맛이 난다.");
+            eater.Eat(superCon, "여러 가지 맛이 있지만 개인적으로 쿠앤크가 맛있다.");
+            eater.Eat(shootingStar, "톡 쏘는 맛이 난다.");
+
+            printer.Print(dogBar);
+            printer.Print(superCon);
+            printer.Print(shootingStar);
         }
     }
 }

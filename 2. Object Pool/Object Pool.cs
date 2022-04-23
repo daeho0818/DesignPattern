@@ -20,7 +20,6 @@ namespace ObjectPool
         // pool에 obj가 있다면 반환, 없다면 생성하여 반환하는 함수
         public MyConnection GetObject()
         {
-            MyConnection obj;
             if (pool.Count > 0)
             {
                 return pool.Dequeue();
