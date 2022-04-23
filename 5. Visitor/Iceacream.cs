@@ -44,15 +44,15 @@ namespace Iceacream
     {
         public void Visit(DogBar icecream, string content)
         {
-            Console.WriteLine($"갈색 색깔인 {content}");
+            Console.WriteLine($"{icecream} : 갈색 색깔인 {content}");
         }
         public void Visit(SuperCon icecream, string content)
         {
-            Console.WriteLine($"여려 가지 색깔인 {content}");
+            Console.WriteLine($"{icecream} :여려 가지 색깔인 {content}");
         }
         public void Visit(ShootingStar icecream, string content)
         {
-            Console.WriteLine($"하늘색 색깔인 {content}");
+            Console.WriteLine($"{icecream} :하늘색 색깔인 {content}");
         }
     }
 

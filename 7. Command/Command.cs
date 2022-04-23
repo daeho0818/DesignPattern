@@ -78,8 +78,8 @@ namespace Command
             for (int i = 0; i < 5; i++)
             {
                 user.AddCommand(c);
-                user.AddCommand(broker, "AMZN", TxType.Sell, 2000);
             }
+            user.AddCommand(broker, "AMZN", TxType.Sell, 2000);
 
             user.ExcuteAll();
         }

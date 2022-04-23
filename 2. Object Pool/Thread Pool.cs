@@ -22,8 +22,8 @@ namespace Thread_Pool
             if (radius == null) return;
 
             double r = (double)radius;
-            double area = r * r * 3.14;
-            Console.WriteLine("r = {0}, area={1}", r, area);
+            double area = r * r * 3.14f;
+            Console.WriteLine($"r = {r}, area = {area}");
         }
     }
 }

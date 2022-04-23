@@ -46,6 +46,7 @@ namespace Bridge
         {
             Abstraction ab = new RefinedAbstraction();
 
+            // 상황에 맞게 할당하여 각자 클래스에 구현된 인터페이스 함수 실행
             ab.Implementor = new ImplementorA();
             ab.Operation();
 

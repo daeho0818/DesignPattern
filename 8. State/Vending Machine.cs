@@ -202,7 +202,7 @@ namespace Vending_Machine
 
     class Clent
     {
-        static void Main(string[] args)
+        static void _Main(string[] args)
         {
             var vm = new VendingMachine();
             vm.AddMoney(1);
