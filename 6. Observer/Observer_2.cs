@@ -35,7 +35,8 @@ namespace Observer_2
 
         public void Test()
         {
-            // Changed 이벤트가 호출될 때마다 실행할 동작 지정
+            // 1초가 지날 때마다 호출되는 Changed 이벤트에 Subject_Changed 함수를
+            // 구독함으로써 1초가 지날 때마다 Subject_Change 함수가 호출
             subject.Changed += Subject_Changed;
 
             Thread.Sleep(5000);
