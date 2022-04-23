@@ -15,14 +15,14 @@ namespace ObjectPool
 
     public class MyConnectionPool
     {
-        private readonly ConcurrentBag<MyConnection> pool = new ConcurrentBag<MyConnection>();
+        private readonly Queue<MyConnection> pool = new Queue<MyConnection>();
 
         public MyConnection GetObject()
         {
             MyConnection obj;
-            if (pool.TryTake(out obj))
+            if (pool.Count > 0)
             {
-                return obj;
+                return pool.Dequeue();
             }
             else
             {
@@ -32,7 +32,7 @@ namespace ObjectPool
 
         public void ReleaseObject(MyConnection conn)
         {
-            pool.Add(conn);
+            pool.Enqueue(conn);
             Debug.WriteLine($"Release: {conn.GetHashCode()}");
         }
     }
