@@ -51,6 +51,7 @@ namespace AbstractFactory
         public void HowToTest()
         {
             AbstractFactory factory = new ConcreteFactory1();
+
             ProductA prodA = factory.CreateProductA();
             ProductB prodB = factory.CreateProductB();
         }

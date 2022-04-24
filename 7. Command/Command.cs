@@ -8,22 +8,22 @@ namespace Command
 {
     class User
     {
-        private List<ICommand> _commands = new List<ICommand>();
+        private List<ICommand> commands = new List<ICommand>();
 
         public void AddCommand(ICommand command)
         {
-            _commands.Add(command);
+            commands.Add(command);
         }
 
         public void AddCommand(StockBroker broker, string symbol, TxType txType, int qty)
         {
             ICommand command = new StockCommand(broker, symbol, txType, qty);
-            _commands.Add(command);
+            commands.Add(command);
         }
 
         public void ExcuteAll()
         {
-            foreach (ICommand cmd in _commands)
+            foreach (ICommand cmd in commands)
             {
                 cmd.Excute();
             }
